@@ -151,13 +151,6 @@ The Streamlit UI provides 4 main tabs:
 4. **Documentation**: Built-in help and troubleshooting
 
 ### API Endpoints
-
-Once the server is running, you can access:
-
-- **API Documentation**: http://localhost:8000/docs
-- **Health Check**: http://localhost:8000/health
-- **Root Info**: http://localhost:8000/
-
 **Manual API Testing:**
 ```bash
 # Health check
@@ -185,54 +178,6 @@ This utility shows:
 - Sample test queries
 - Your RAG implementation results
 
-### Running Tests
-```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=src tests/
-
-# Run specific component tests
-pytest tests/test_stt.py -v
-pytest tests/test_tts.py -v
-pytest tests/test_llm.py -v
-```
-
-## What's Provided vs What You Implement
-
-### Already Complete (Provided)
-
-**RAG Knowledge Base:**
-- 16 comprehensive customer support documents
-- Automatic ChromaDB setup and document ingestion
-- Embedding generation with sentence-transformers
-- Persistent storage (survives server restarts)
-
-**Infrastructure:**
-- Complete FastAPI server with all endpoints
-- Streamlit testing interface with 4 tabs
-- Abstract base classes for all components
-- Configuration management and environment setup
-- Test utilities and documentation
-
-**Pipeline Framework:**
-- Complete orchestration logic structure
-- Error handling and logging framework
-- Health monitoring system
-
-### Your Implementation Tasks
-
-**Core Components (Required):**
-1. **RAG Search Logic**: Complete `_rag_search()` method in `CustomerSupportAgent`
-2. **STT Implementation**: Complete `STTService` class methods (initialize, transcribe, cleanup)
-3. **TTS Implementation**: Complete `TTSService` class methods (initialize, synthesize, cleanup)
-4. **Pipeline Integration**: Complete pipeline initialization and audio processing flow
-5. **Server Configuration**: Configure startup with your chosen services
-
-**See `docs/ASSIGNMENT_GUIDE.md` for detailed implementation instructions.**
-
-## Troubleshooting
 
 ### Common Setup Issues
 
@@ -259,39 +204,5 @@ pytest tests/test_llm.py -v
 3. **Test Utilities**: `kb_test.py` for RAG debugging
 4. **Streamlit UI**: Real-time component monitoring
 
-## Learning Objectives
 
-By completing this assignment, you will learn:
 
-1. **Async Python Programming**: Working with async/await patterns
-2. **API Integration**: Multiple third-party service integration
-3. **Modular Design**: Creating reusable, testable components
-4. **RAG Implementation**: Building retrieval-augmented generation systems
-5. **FastAPI Development**: Creating REST APIs for ML applications
-6. **Error Handling**: Robust error handling in production systems
-7. **Audio Processing**: Working with audio data in Python
-
-## Documentation
-
-- **Implementation Guide**: `docs/ASSIGNMENT_GUIDE.md` - Detailed coding instructions
-- **RAG Guide**: `docs/RAG_IMPLEMENTATION_GUIDE.md` - Specific RAG implementation help
-- **API Documentation**: Available at `/docs` when server is running
-
-## Support
-
-If you encounter issues:
-
-1. Check the health endpoint to see component status
-2. Review server logs for detailed error messages  
-3. Use the test utilities to debug individual components
-4. Verify API keys and service configurations
-5. Check the troubleshooting section in documentation
-
-## Getting Help
-
-- Use the provided test utilities (`kb_test.py`, Streamlit UI)
-- Check the comprehensive documentation in the `docs/` folder
-- Review the sample implementations and code comments
-- Test components individually before integration
-
-Good luck with your implementation!
