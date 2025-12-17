@@ -4,8 +4,7 @@ A modular audio-based customer support agent that uses Speech-to-Text (STT), Lar
 
 ## Project Overview
 
-This project provides a **blueprint** for implementing an audio customer support agent. Students implement the core functionality by completing TODO sections throughout the codebase.
-
+This project provides a **blueprint** for implementing an audio customer support agent.
 ### Pipeline Flow
 ```
 Audio Input → STT → LLM Agent (with RAG) → TTS → Audio Output
